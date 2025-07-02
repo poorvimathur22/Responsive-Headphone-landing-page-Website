@@ -44,7 +44,7 @@ Responsive-Headphone-landing-page-Website/
 1. **Clone the Repository**  
    ```bash
    git clone https://github.com/poorvimathur22/Responsive-Headphone-landing-page-Website.git
-   cd headphone-landing-page
+   cd Responsive-Headphone-landing-page-Website
    ```
 
 2. **Open `index.html` in your browser**
