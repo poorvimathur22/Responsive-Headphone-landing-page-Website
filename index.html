@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SoundWave - A2 Series</title>
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="script.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <div class="logo">SoundWave</div>
+    <nav class="main-nav">
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#products">Products</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><button class="btn login-btn" onclick="toggleForm('login')">Login</button></li>
+        <li><button class="btn register-btn" onclick="toggleForm('register')">Register</button></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="home" class="hero-section">
+    <div class="hero-content container">
+      <div class="text-area">
+        <h3>A2 SERIES</h3>
+        <h1>NEW ARRIVAL</h1>
+        <p class="tagline">Experience sound like never before with our latest Bluetooth headphones.</p>
+        <p class="description">
+          Our newest headphones come with enhanced bass, noise cancellation, and up to 30 hours of battery life. Designed for audiophiles and everyday users alike.
+        </p>
+        <a href="#products" class="btn cta-btn">Order Now</a>
+        <div class="socials">
+          <img src="images/twitter.png" alt="Twitter" />
+          <img src="images/instagram.png" alt="Instagram" />
+          <img src="images/linkedin.png" alt="LinkedIn" />
+        </div>
+      </div>
+      <div class="image-area">
+        <img src="images\headphones-displayed-against-dark-background.png" alt="Hero Headphones" class="hero-img" />
+      </div>
+    </div>
+  </section>
+
+  <section id="products" class="products">
+    <h2>Our Bestsellers</h2>
+    <div class="product-grid">
+      <div class="product">
+        <img src="images\product1.png" alt="Headphone A" />
+        <h3>Headphone A</h3>
+        <p>₹9,999</p>
+      </div>
+      <div class="product">
+        <img src="images\product2.png" alt="Headphone B" />
+        <h3>Headphone B</h3>
+        <p>₹7,499</p>
+      </div>
+      <div class="product">
+        <img src="images\product3.png" alt="Headphone C" />
+        <h3>Headphone C</h3>
+        <p>₹6,299</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="about">
+  <h2>About SoundWave</h2>
+  <p>
+    At <strong>SoundWave</strong>, we believe in redefining how the world experiences sound. Our premium range of wireless headphones is built for those who crave deep bass, crystal-clear highs, and long-lasting comfort.
+  </p>
+  <ul class="features-list">
+    <li><strong>🎧 Enhanced Bass:</strong> Designed to deliver thumping lows without distortion.</li>
+    <li><strong>🔇 Active Noise Cancellation:</strong> Block out distractions with advanced ANC technology.</li>
+    <li><strong>🔋 30-Hour Battery:</strong> Stay connected longer with up to 30 hours of playback time.</li>
+    <li><strong>💡 Voice Assistant Support:</strong> Compatible with Siri, Google Assistant & Alexa.</li>
+    <li><strong>🧠 Smart Controls:</strong> Touch gestures for volume, calls, and track navigation.</li>
+    <li><strong>🛠️ Durable Build:</strong> Crafted with premium materials for all-day wear and travel.</li>
+  </ul>
+</section>
+
+
+  <section id="contact" class="contact">
+  <h2>Contact Us</h2>
+  <p>We’re here to help. Reach out to us anytime!</p>
+
+  <div class="contact-info">
+    <p><strong>Email:</strong> support@soundwave.com</p>
+    <p><strong>Phone:</strong> +91 98765 43210</p>
+  </div>
+
+  <form class="contact-form" onsubmit="return submitContactForm(event)">
+    <input type="text" placeholder="Your Name" required />
+    <input type="email" placeholder="Your Email" required />
+    <textarea rows="5" placeholder="Your Message" required></textarea>
+    <button type="submit">Send Message</button>
+  </form>
+</section>
+
+
+
+  <div id="form-popup" class="form-popup hidden">
+  <div class="form-box" id="login-box">
+    <span class="close-btn" onclick="closeForm()">&times;</span>
+    <form id="login-form" onsubmit="return handleLogin(event)">
+      <h2>Login</h2>
+      <input type="email" placeholder="Email" required />
+      <input type="password" placeholder="Password" required />
+      <button type="submit">Login</button>
+    </form>
+  </div>
+
+  <div class="form-box hidden" id="register-box">
+    <span class="close-btn" onclick="closeForm()">&times;</span>
+    <form id="register-form" onsubmit="return handleRegister(event)">
+      <h2>Register</h2>
+      <input type="text" placeholder="Username" required />
+      <input type="email" placeholder="Email" required />
+      <input type="password" placeholder="Password" required />
+      <button type="submit">Register</button>
+    </form>
+  </div>
+</div>
+
+</body>
+</html>
